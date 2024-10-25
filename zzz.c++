@@ -3,6 +3,7 @@ using namespace std;
 #include<vector>
 #include<algorithm>
 #include<string>
+#include<cmath>
 
 class Solution {
 public:
@@ -36,12 +37,14 @@ public:
 };
 
 int main(){
-    vector<string>dic={"ox","lb","diz","gu","v","ksv","o","nuq","r","txhe","e","wmo","cehy","tskz","ds","kzbu"};
+//     vector<string>dic={"ox","lb","diz","gu","v","ksv","o","nuq","r","txhe","e","wmo","cehy","tskz","ds","kzbu"};
 
-;
-    string s="dwmodizxvvbosxxw";
-    Solution s1;
-    int re = s1.minExtraChar(s,dic);
-    cout<<re;
+// ;
+//     string s="dwmodizxvvbosxxw";
+//     Solution s1;
+//     int re = s1.minExtraChar(s,dic);
+//     cout<<re;
+
+    cout<<abs(-3);
     return 0;
 }
