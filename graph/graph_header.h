@@ -100,4 +100,19 @@ class Graph{
         }
     }
 
+    void wershell(){
+        vector<vector<int>>result=adj;
+        for(int c1=0;c1<v-1;c1++){
+            for(int c2=0;c2<v;c2++){
+                for(int c3=0;c3<v;c3++){
+                    int cur=result[c2][c3];
+                    if(!cur && adj[c2][c1] && adj[c1][c3]){
+                        result[c2][c3]=1;
+                    }
+                }
+            }
+        }
+        path_m=result;
+    }
+
 };
