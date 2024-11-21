@@ -3,11 +3,11 @@
 using namespace std;
 
 class Graph{
+    public:
     int v,e;
     vector<vector<int>>adj;
     int size;
     vector<vector<int>>path_m;
-    public:
     Graph(){};
 
     Graph(int v,int e){
