@@ -42,7 +42,7 @@ using namespace std;
 void traversal(const vector<vector<int>>& adj,vector<int>& state,int& v,int st,vector<vector<int>>& matrix,int& time){
 
     if(!state[st]){
-        cout<<st;
+        cout<<st<<" ";
         matrix[st].push_back(time++);
         state[st]=1;
     }
@@ -54,7 +54,7 @@ void traversal(const vector<vector<int>>& adj,vector<int>& state,int& v,int st,v
     }
 
     matrix[st].push_back(time++);
-    v--;
+    v++;
 
     return;
 }
@@ -67,12 +67,14 @@ void dfs(vector<vector<int>> adj){
     vector<vector<int>>matrix(v);
     int temp=1;
 
-    while(v>0){
-        cout<<v-1;
-        traversal(adj,state,v,v-1,matrix,temp);
+    int c1=0;
+    int c2=0;
+    while(c1<v){
+        traversal(adj,state,c1,c2,matrix,temp);
+        c2++;
     }
 
-    cout<<endl;             //may be this not work;
+    cout<<endl<<"Visited time"<<"finished time"<<endl;             //may be this not work;
     for(auto el:matrix){
         for(auto el2:el){
             cout<<el2<<" ";
@@ -92,6 +94,7 @@ int main(){
     g1.createGraph();
     vector<vector<int>>adj=g1.adj;
 
+    cout<<"vertex of graph :";
     dfs(adj);
     return 0;
 }
