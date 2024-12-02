@@ -6,7 +6,10 @@
 using namespace std;
 
 int main() {
-    cout<<INT_MAX+INT_MAX;
+    int c1=1;
+    vector<int>arr={1,-1};
+    if(arr[0]>arr[1])
+        cout<<"hi";
 
     return 0;
 }
